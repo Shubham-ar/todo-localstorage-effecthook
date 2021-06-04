@@ -21,7 +21,7 @@ form {
   right: 30%;
   left: 30%;
   border-radius: 8px;
-  border: 2px solid rgb(66, 66, 180);
+  border: 1px solid white;
   color: #000;
   box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.5);
 }
@@ -42,3 +42,4 @@ form {
   background-color: darkgray;
   text-decoration: line-through;
 }
+
