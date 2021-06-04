@@ -6,12 +6,12 @@ import { FaCheckDouble } from 'react-icons/fa'
 const Todos = ({ todos, markComplete }) => {
     return (
         <ListGroup className="items">
-            {todos.map(todo=>(
+            {todos.map(todo => (
                 <ListGroupItem key={todo.id}>
                     {todo.todoString}
                     <span className="float-right"
-                    onClick={markComplete}>
-                        <FaCheckDouble/>
+                        onClick={() => markComplete(todo.id)}>
+                        <FaCheckDouble />
                     </span>
                 </ListGroupItem>
 
