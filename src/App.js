@@ -33,8 +33,8 @@ function App() {
   return (
     <Container fluid>
       <h1>TodoWithLocalStorage</h1>
-      <TodoForm addTodo={addTodo} markComplete={markComplete} />
-      <Todos todos={todos} />
+      <TodoForm addTodo={addTodo} />
+      <Todos todos={todos}  markComplete={markComplete} />
     </Container>
   );
 }
