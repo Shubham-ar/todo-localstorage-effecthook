@@ -5,8 +5,8 @@
 }
 
 body {
-  position: relative;
   background-color: rgb(104, 104, 104);
+  overflow-y: auto;
 }
 
 h1 {
@@ -31,7 +31,9 @@ form {
   top: 160px;
   right: 30%;
   left: 30%;
+  bottom: 10vh;
   border-radius: 8px;
+  overflow-y: auto ;
 }
 
 .form-group {
@@ -43,6 +45,27 @@ form {
   text-decoration: line-through;
 }
 
-.float-right{
+.float-right {
   float: right;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 2px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
