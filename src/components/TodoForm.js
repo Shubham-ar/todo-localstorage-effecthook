@@ -10,6 +10,7 @@ import {
      Container
 } from 'reactstrap'
 import { uuid, v4 } from 'uuid'
+import { toast } from 'react-toastify'
 
 const TodoForm = ({ addTodo }) => {
      const [todoString, setTodoString] = useState("")
@@ -17,18 +18,21 @@ const TodoForm = ({ addTodo }) => {
      const handleSubmit = e => {
           e.preventDefault();
           if (todoString === "") {
-               return alert("Please enter a Todo")
+               toast.error("Please Enter Todo", {
+                    position: toast.POSITION.TOP_RIGHT
+               });
           }
+          else {
+               const todo = {
+                    //we can also write simply- todoString
+                    title: todoString,
+                    id: v4()
+               }
 
-          const todo = {
-               //we can also write simply- todoString
-               title: todoString,
-               id: v4()
+               addTodo(todo)
+
+               setTodoString("")
           }
-
-          addTodo(todo)
-
-          setTodoString("")
 
      }
 
